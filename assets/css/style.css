@@ -1,0 +1,194 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: 'menu busqueda' 'menu principal' 'pie-pagina principal';
+    margin: 0;
+    font-family: sans-serif;
+}
+
+nav{
+    grid-area: menu;
+    background-color: #ee9aee;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    img{
+        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    i{
+        display: none;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    a:hover{
+        background-color: #fcdded;
+    }
+    a:active{
+        background-color: violet;
+    }
+}
+
+.busqueda{ 
+    grid-area: busqueda;
+    text-align: center;
+    background-color: #fcdded;
+    h2{
+        margin: 0;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: lighter;
+    }
+    select{
+        border: none;
+        border-radius: 3px;
+        width: 95%;
+        height: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+}
+
+
+
+main{
+    grid-area: principal;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.carta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #fcdded;
+    border-radius: 20px;
+    img{
+        width: 100%;
+        border-radius: 30px;
+    }
+    h3{
+        margin: 0;
+        margin-top: 15px;
+    }
+    button{
+        margin-top: 15px;
+        margin-bottom: 25px;
+        width: 100px;
+        height: 35px;
+        background-color: #ee9aee;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    button:hover{
+        background-color: #fcdded;
+    }
+    button:active{
+        background-color: violet;
+    }
+}
+
+.pag{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    place-self: center;
+    width: 300px;
+    margin: 0;
+}
+
+.cuadro{
+    border: 1px solid #fcdded;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+    button{
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+        color: #ee9aee;
+    }
+    button:hover{
+        background-color: #fcdded;
+    }
+    button:active{
+        background-color: violet;
+    }
+}
+
+footer{
+    grid-area: pie-pagina;
+    background-color: #ee77ee;
+    text-align: center;
+    color: white;
+    p{
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 21px;
+    }
+    i{
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 576px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'menu' 'busqueda' 'principal' 'pie-pagina';
+    }
+    .menu{
+        justify-content: space-between;
+        flex-direction: row;
+        img{
+            margin-left: 50px;
+        }
+        i{
+            display: inline;
+            color: white;
+            font-size: 30px;
+            margin-right: 60px;
+        }
+        a{
+            display: none;
+        }
+    }
+    .busqueda{
+        select{
+            width: 40%;
+        }
+    }
+    .galeria{
+        grid-template-columns: 3fr;
+        place-self: center;
+    }
+    .carta{
+        width: 450px;
+    }
+    .pag{
+        width: 200px;
+    }
+}
