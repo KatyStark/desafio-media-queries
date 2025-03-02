@@ -42,11 +42,11 @@ nav{
     grid-area: busqueda;
     text-align: center;
     background-color: #fcdded;
-    h2{
-        margin: 0;
-        margin-top: 20px;
+    form{
+        margin: 20px;
+    }
+    label{
         font-size: 18px;
-        font-weight: lighter;
     }
     select{
         border: none;
@@ -56,6 +56,9 @@ nav{
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 15px;
+    }
+    select:focus{
+        outline: none;
     }
 }
 
@@ -81,7 +84,8 @@ main{
     border-radius: 20px;
     img{
         width: 100%;
-        border-radius: 30px;
+        height: 100%;
+        border-radius: 18px;
     }
     h3{
         margin: 0;
@@ -178,7 +182,7 @@ footer{
     }
     .busqueda{
         select{
-            width: 40%;
+            width: 80%;
         }
     }
     .galeria{
