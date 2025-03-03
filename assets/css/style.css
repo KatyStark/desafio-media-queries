@@ -75,6 +75,42 @@ main{
     margin: 20px;
 }
 
+.carta-mob{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #fcdded;
+    border-radius: 20px;
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 18px;
+    }
+    h3{
+        margin: 0;
+        margin-top: 15px;
+    }
+    button{
+        margin-top: 15px;
+        margin-bottom: 25px;
+        width: 100px;
+        height: 35px;
+        background-color: #ee9aee;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    button:hover{
+        background-color: #fcdded;
+    }
+    button:active{
+        background-color: violet;
+    }
+}
+
 .carta{
     display: flex;
     flex-direction: column;
@@ -182,15 +218,18 @@ footer{
     }
     .busqueda{
         select{
-            width: 80%;
+            width: 85%;
         }
     }
     .galeria{
         grid-template-columns: 3fr;
         place-self: center;
     }
-    .carta{
+    .carta-mob{
         width: 450px;
+    }
+    .carta{
+        display: none;
     }
     .pag{
         width: 200px;
